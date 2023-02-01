@@ -1,13 +1,13 @@
 #include <stdio.h>
 int main()
 {
-    int m, n, i;
+    int k, j, i;
     int count = 0;
-    printf("Enter two positive integers, M and N: ");
-    scanf("%d%d", &m, &n);
+    printf("Enter two positive integers, k and j: ");
+    scanf("%d%d", &k, &j);
 
-    printf("Odd numbers between %d and %d are: \n", m, n);
-    for (i = m; i <= n; i++) {
+    printf("Odd numbers between %d and %d are: \n", k, j);
+    for (i = k; i <= j; i++) {
         if (i % 2 != 0) {
             printf("%d\n", i);
         } else {
@@ -15,7 +15,6 @@ int main()
         }
     }
 
-    printf("Number of even numbers between %d and %d: %d\n", m, n, count);
+    printf("Number of even numbers between %d and %d: %d\n", k, j, count);
     return 0;
 }
-
