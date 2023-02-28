@@ -1,0 +1,31 @@
+#include <stdio.h>
+
+struct Student {
+    char name[50];
+    float marks[5];
+    float avg;
+};
+
+int main() {
+    struct Student s;
+    int i;
+
+    printf("Enter name: ");
+    scanf("%s", s.name);
+
+    printf("Enter marks of 5 subjects: ");
+    for (i = 0; i < 5; i++) {
+        scanf("%f", &s.marks[i]);
+        s.avg += s.marks[i];
+    }
+    s.avg /= 5.0;
+
+    printf("Name: %s\n", s.name);
+    printf("Marks: ");
+    for (i = 0; i < 5; i++) {
+        printf("%.2f ", s.marks[i]);
+    }
+    printf("\nAverage marks: %.2f\n", s.avg);
+
+    return 0;
+}
