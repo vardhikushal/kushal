@@ -1,0 +1,26 @@
+#include <stdio.h>
+#include <string.h>
+ 
+int main(){
+    char inputString[100], outputArray[100];
+    int readIndex = 0, writeIndex = 0;
+     
+    printf("Enter a String \n");
+    gets(inputString);
+     
+    while(inputString[readIndex] == ' '){
+        readIndex++;
+    }
+ 
+    for(;inputString[readIndex]!='\0'; readIndex++){
+      if(inputString[readIndex]==' ' && inputString[readIndex-1]==' '){
+          continue;
+      }
+      outputArray[writeIndex] = inputString[readIndex];
+      writeIndex++;
+    }
+    outputArray[writeIndex] = '\0';
+    printf("String without extra spaces\n%s", outputArray);
+ 
+    return 0;
+}
