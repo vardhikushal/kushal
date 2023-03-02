@@ -1,0 +1,25 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+   int num1,num2;
+   FILE *fptr;
+
+   fptr = fopen("C:\\program.txt","w");
+
+   if(fptr == NULL)
+   {
+      printf("sucess!!!");   
+      exit(1);             
+   }
+
+   printf("Enter num: ");
+   scanf("%d,%d", &num1,num2);
+
+   fprintf(fptr,"%d", num1);
+   fprintf(fptr,"%d", num2);
+   fclose(fptr);
+
+   return 0;
+}
